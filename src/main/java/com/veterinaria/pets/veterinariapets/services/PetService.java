@@ -19,8 +19,7 @@ public class PetService {
         this.petRepository = petRepository;
     }
     public Flux<Pet> getAllPets(){
-        return petRepository.findAll()
-                .filter(pet -> pet.getState().equals(VISIBLE));
+        return petRepository.findAll();
     }
     public Mono<ResponseEntity<Pet>> findPetById(String id){
         return petRepository.findById(id)
