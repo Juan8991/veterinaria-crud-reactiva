@@ -4,6 +4,8 @@ package com.veterinaria.pets.veterinariapets.model;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -19,20 +21,21 @@ public class Pet {
      */
     @Id
     private String id;
-    @NotNull
+    @NotBlank
     private String namePet;
-    @NotNull
+    @NotBlank
     private String parentsName;
-    @NotNull
+    @NotBlank
     private String type;
-    @NotNull
+    @NotBlank
     private String race;
-    @NotNull
+    @NotBlank
     private Integer age;
+    @NotBlank
     private String characteristicsPet;
-    @NotNull
+    @NotBlank
     private String phone;
-    @NotNull
+    @NotBlank
     private String address;
     /**
      * Atributo state que nos permite realizar el borrado logico,
